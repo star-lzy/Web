@@ -1,0 +1,112 @@
+body{
+    background-color: lightsteelblue;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    left: 20%;
+    position: absolute;
+    width: 60%;
+}
+
+ul li{
+    cursor: pointer;
+    position: relative; /*absolute会重叠*/
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    padding: 15px 45px 15px 40px; /*45px关闭按钮*/
+    border-bottom: 2px solid lightsteelblue;
+    transition: 0.2s;
+    user-select: none; /*用户不能文本选中*/
+    font-family: "Times New Roman", "SimSun";
+    font-size: 16px;
+    list-style: none; /*去掉小圆点*/
+    word-wrap:break-word; 
+    word-break:break-all;
+}
+
+/* hover时背景色改变 */
+ul li:hover {
+    background: whitesmoke;
+}
+
+/* 当被选中，文字中加横线 */
+ul li.checked {
+    text-decoration: line-through;
+}
+
+/* 为被选中的li增加 “对勾” 图标 */
+ul li.checked::before {
+    content: '\2714';
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: lightsteelblue;
+}
+
+/* 头部样式 */
+.header {
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* 清除浮动 */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+}
+
+/* 输入框样式 */
+input {
+    border: none;
+    width: 55%;
+    height: 30px;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    outline: 0;
+}
+
+/* 关闭按钮样式 */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px 20px 22px 20px;
+}
+
+.close:hover {
+    background-color: red;
+    color: white;
+}
+
+/* “添加”按钮样式 */
+.addBtn {
+    cursor: pointer;
+    padding: 9px 10px 8px;
+    width: 5%;
+    height: 33px;
+    background-color: lightgray;
+    color: gray;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: silver;
+}
